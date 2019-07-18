@@ -6,18 +6,18 @@
   <meta name="keywords" content=" Docker ">
   <meta name="description" content="docker的那些事 | 测试的那些事">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="在Jmeter中需要用到字符串拆分，及类型转换，下面给出代码样例： 123456789101112//要拆分的字符串String  S=&amp;quot;21:12:59&amp;quot;;//拆分之后的字符串列表String []ll=S.split(&amp;quot;:&amp;quot;);//在控制台输出for(i=0;i&amp;lt;ll.length;i++)&amp;#123;System.out.println(ll[i">
-<meta name="keywords" content="Jmeter,Beanshell">
+<meta name="description" content="​      容器对应用程序及其依赖关系的封装。它和虚拟机一样拥有一个被隔离的操作系统实例，用来运行程序。容器拥有一些优点，使它能实现一些传统虚拟机很难实现甚至无法实习的用例。  容器能与主机的操作系统共享资源。 容器具有可移植性。 容器是轻量的 用户可以下载并执行复杂的应用程序，而无需花费大量时间在配置和安装的问题上，也无需担心对系统本身的改动。另一方面，应用程序的开发者不用再操心用户环境的差异">
+<meta name="keywords" content="Docker,容器,虚拟机">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Beanshell中字符串拆分及字符串转换为整型">
-<meta property="og:url" content="http://henni-719.github.io/2019/07/19/Beanshell_01/index.html">
+<meta property="og:title" content="什么是容器">
+<meta property="og:url" content="http://henni-719.github.io/2019/07/19/docker_02/index.html">
 <meta property="og:site_name" content="测试的那些事">
-<meta property="og:description" content="在Jmeter中需要用到字符串拆分，及类型转换，下面给出代码样例： 123456789101112//要拆分的字符串String  S=&amp;quot;21:12:59&amp;quot;;//拆分之后的字符串列表String []ll=S.split(&amp;quot;:&amp;quot;);//在控制台输出for(i=0;i&amp;lt;ll.length;i++)&amp;#123;System.out.println(ll[i">
+<meta property="og:description" content="​      容器对应用程序及其依赖关系的封装。它和虚拟机一样拥有一个被隔离的操作系统实例，用来运行程序。容器拥有一些优点，使它能实现一些传统虚拟机很难实现甚至无法实习的用例。  容器能与主机的操作系统共享资源。 容器具有可移植性。 容器是轻量的 用户可以下载并执行复杂的应用程序，而无需花费大量时间在配置和安装的问题上，也无需担心对系统本身的改动。另一方面，应用程序的开发者不用再操心用户环境的差异">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-18T21:01:39.214Z">
+<meta property="og:updated_time" content="2019-07-18T21:12:43.476Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Beanshell中字符串拆分及字符串转换为整型">
-<meta name="twitter:description" content="在Jmeter中需要用到字符串拆分，及类型转换，下面给出代码样例： 123456789101112//要拆分的字符串String  S=&amp;quot;21:12:59&amp;quot;;//拆分之后的字符串列表String []ll=S.split(&amp;quot;:&amp;quot;);//在控制台输出for(i=0;i&amp;lt;ll.length;i++)&amp;#123;System.out.println(ll[i">
+<meta name="twitter:title" content="什么是容器">
+<meta name="twitter:description" content="​      容器对应用程序及其依赖关系的封装。它和虚拟机一样拥有一个被隔离的操作系统实例，用来运行程序。容器拥有一些优点，使它能实现一些传统虚拟机很难实现甚至无法实习的用例。  容器能与主机的操作系统共享资源。 容器具有可移植性。 容器是轻量的 用户可以下载并执行复杂的应用程序，而无需花费大量时间在配置和安装的问题上，也无需担心对系统本身的改动。另一方面，应用程序的开发者不用再操心用户环境的差异">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -130,11 +130,11 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(2)</small></div></li>
+    <li><div class="all active">全部文章<small>(3)</small></div></li>
     
         
             
-            <li><div data-rel="Docker">Docker<small>(1)</small></div>
+            <li><div data-rel="Jmeter">Jmeter<small>(1)</small></div>
                 
             </li>
             
@@ -142,7 +142,7 @@
     
         
             
-            <li><div data-rel="Jmeter">Jmeter<small>(1)</small></div>
+            <li><div data-rel="Docker">Docker<small>(2)</small></div>
                 
             </li>
             
@@ -158,8 +158,8 @@
     </div>
     <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="2">
-<input type="hidden" id="yelog_site_word_count" value="135">
+<input type="hidden" id="yelog_site_posts_number" value="3">
+<input type="hidden" id="yelog_site_word_count" value="383">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -193,10 +193,6 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">Docker</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">Jmeter</a>
     </li>
     
@@ -204,11 +200,31 @@
         <a href="javascript:" class="color5">Beanshell</a>
     </li>
     
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">容器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">虚拟机</a>
+    </li>
+    
     <div class="clearfix"></div>
 </div>
 
     
     <nav id="title-list-nav">
+        
+        <a  class="Jmeter "
+           href="/2019/07/19/Beanshell_01/"
+           data-tag="Jmeter,Beanshell"
+           data-author="" >
+            <span class="post-title" title="Beanshell中字符串拆分及字符串转换为整型">Beanshell中字符串拆分及字符串转换为整型</span>
+            <span class="post-date" title="2019-07-19 05:01:39">2019/07/19</span>
+        </a>
         
         <a  class="Docker "
            href="/2019/07/19/docker_01/"
@@ -218,12 +234,12 @@
             <span class="post-date" title="2019-07-19 03:03:19">2019/07/19</span>
         </a>
         
-        <a  class="Jmeter "
-           href="/2019/07/19/Beanshell_01/"
-           data-tag="Jmeter,Beanshell"
+        <a  class="Docker "
+           href="/2019/07/19/docker_02/"
+           data-tag="Docker,容器,虚拟机"
            data-author="" >
-            <span class="post-title" title="Beanshell中字符串拆分及字符串转换为整型">Beanshell中字符串拆分及字符串转换为整型</span>
-            <span class="post-date" title="2019-07-19 05:01:39">2019/07/19</span>
+            <span class="post-title" title="什么是容器">什么是容器</span>
+            <span class="post-date" title="2019-07-19 05:15:52">2019/07/19</span>
         </a>
         
     </nav>
@@ -413,7 +429,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#Docker','#Jmeter','#Beanshell',],
+            'data': ['#Jmeter','#Beanshell','#Docker','#容器','#虚拟机',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
