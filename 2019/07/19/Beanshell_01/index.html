@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>docker的那些事 | 测试的那些事</title>
-  <meta name="keywords" content=" Docker ">
-  <meta name="description" content="docker的那些事 | 测试的那些事">
+  <title>Beanshell中字符串拆分及字符串转换为整型 | 测试的那些事</title>
+  <meta name="keywords" content=" Jmeter , Beanshell ">
+  <meta name="description" content="Beanshell中字符串拆分及字符串转换为整型 | 测试的那些事">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="基于个人兴趣在csdn开设了一门公开课，课名为“docker的那些事”，目前课程的大纲在附注：">
 <meta name="keywords" content="Docker">
@@ -240,9 +240,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-docker_01" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Beanshell_01" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">docker的那些事</h1>
+        <h1 class="article-title">Beanshell中字符串拆分及字符串转换为整型</h1>
     
     <div class="article-meta">
         
@@ -250,26 +250,28 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="Docker">Docker</a>
+                <a href="javascript:" data-rel="Jmeter">Jmeter</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color2">Docker</a>
+            <a href="javascript:" class="color2">Jmeter</a>
+            
+            <a href="javascript:" class="color5">Beanshell</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-07-19 03:03:19'>2019-07-19 03:03</time>
+        创建时间:<time class="date" title='更新时间: 2019-07-19 05:01:39'>2019-07-19 05:01</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:34</span>
+        <span>字数:101</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -314,7 +316,9 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>基于个人兴趣在csdn开设了一门公开课，课名为“<a href="https://edu.csdn.net/course/detail/24994" target="_blank" rel="noopener">docker的那些事</a>”，目前课程的大纲在附注：<img src="https://img-blog.csdnimg.cn/20190722081816816.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hlbm5pXzcxOQ==,size_16,color_FFFFFF,t_70" alt="20190722081816816"></p>
+        <p>在Jmeter中需要用到字符串拆分，及类型转换，下面给出代码样例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//要拆分的字符串</span><br><span class="line">String  S=&quot;21:12:59&quot;;</span><br><span class="line">//拆分之后的字符串列表</span><br><span class="line">String []ll=S.split(&quot;:&quot;);</span><br><span class="line">//在控制台输出</span><br><span class="line">for(i=0;i&lt;ll.length;i++)</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(ll[i]); </span><br><span class="line">&#125;</span><br><span class="line">//把字符串转换为整数并加和输出</span><br><span class="line">temp=Integer.parseInt(ll[2])+5;</span><br><span class="line">System.out.println(temp);</span><br></pre></td></tr></table></figure>
+
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 592497880@qq.com </span>
@@ -328,12 +332,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>docker的那些事</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">34</span></p>
+    <p><span class="copy-title">文章标题:</span>Beanshell中字符串拆分及字符串转换为整型</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">101</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="ewang">ewang</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-07-19, 03:03:19</p>
-    <p><span class="copy-title">最后更新:</span>2019-07-19, 03:03:19</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/19/docker_01/" title="docker的那些事">http://henni-719.github.io/2019/07/19/docker_01/</a>
+    <p><span class="copy-title">发布时间:</span>2019-07-19, 05:01:39</p>
+    <p><span class="copy-title">最后更新:</span>2019-07-19, 05:01:39</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/19/Beanshell_01/" title="Beanshell中字符串拆分及字符串转换为整型">http://henni-719.github.io/2019/07/19/Beanshell_01/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
