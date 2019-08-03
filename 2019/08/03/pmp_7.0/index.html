@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>7.0 成本管理 | 测试的那些事</title>
+  <meta name="keywords" content=" PMP , 项目成本管理 ">
+  <meta name="description" content="7.0 成本管理 | 测试的那些事">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="控制成本是监督项目状态，以更新项目成本和管理项目成本基准变更的过程。 本过程的主要作用是，在整个项目期间保持对成本基准的维护。  7.4.1 输入 待分析  7.4.2  工具和技术 挣值分析: BAC：完工预算，全部计划工作的预算价值，就是成本基准。 PV：计划价值(计划工作量x预算单位)，截止到某个时间点，计划完成工作的预算价值。 EV：挣值(实际工作量x预算单位)，截止到某个时间点，实际完">
+<meta name="keywords" content="PMP,控制成本,挣值分析,偏差分析,趋势分析,完工尚需绩效指数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7.4 控制成本">
+<meta property="og:url" content="http://henni-719.github.io/2019/08/03/pmp_7.4/index.html">
+<meta property="og:site_name" content="测试的那些事">
+<meta property="og:description" content="控制成本是监督项目状态，以更新项目成本和管理项目成本基准变更的过程。 本过程的主要作用是，在整个项目期间保持对成本基准的维护。  7.4.1 输入 待分析  7.4.2  工具和技术 挣值分析: BAC：完工预算，全部计划工作的预算价值，就是成本基准。 PV：计划价值(计划工作量x预算单位)，截止到某个时间点，计划完成工作的预算价值。 EV：挣值(实际工作量x预算单位)，截止到某个时间点，实际完">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-03T07:53:20.617Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="7.4 控制成本">
+<meta name="twitter:description" content="控制成本是监督项目状态，以更新项目成本和管理项目成本基准变更的过程。 本过程的主要作用是，在整个项目期间保持对成本基准的维护。  7.4.1 输入 待分析  7.4.2  工具和技术 挣值分析: BAC：完工预算，全部计划工作的预算价值，就是成本基准。 PV：计划价值(计划工作量x预算单位)，截止到某个时间点，计划完成工作的预算价值。 EV：挣值(实际工作量x预算单位)，截止到某个时间点，实际完">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>ewang</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/henni-719" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/58b76feb5d89" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="csdn" href="https://blog.csdn.net/henni_719" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-csdn"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:592497880@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=592497880&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(45)</small></div></li>
+    
+        
+            
+            <li><div data-rel="Docker">Docker<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Jmeter">Jmeter<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="PMP重点知识"><i class="fold iconfont icon-right"></i>PMP重点知识<small>(42)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="第二章 项目运行环境">第二章 项目运行环境<small>(4)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="第一章 引论">第一章 引论<small>(7)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="第三章 项目经理的角色">第三章 项目经理的角色<small>(3)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="第四章 项目整合管理">第四章 项目整合管理<small>(8)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="第五章 项目范围管理">第五章 项目范围管理<small>(7)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="第六章 项目进度管理">第六章 项目进度管理<small>(7)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="第七章 项目成本管理">第七章 项目成本管理<small>(5)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="第八章 项目质量管理">第八章 项目质量管理<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="45">
+<input type="hidden" id="yelog_site_word_count" value="16.1k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://blog.csdn.net/henni_719">henni_719</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">容器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">虚拟机</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Jmeter</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Beanshell</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">PMP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">良好实践</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">普遍认可</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">项目</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">项目管理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">项目组合</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">项目集</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">运营</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">项目生命周期</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">预测型</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">适应型</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">商业论证</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">效益管理计划</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">工作绩效数据</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">工作绩效信息</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">工作绩效报告</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">事业环境因素</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">组织过程资产</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">项目章程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">项目管理计划</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">项目成功的标准</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">组织系统</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">职能型</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">矩阵型</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">项目型</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">项目管理办公室</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">支持型</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">控制型</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">指令型</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">PMO作用</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">项目经理的角色</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">PMI人才三角</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">项目经理的几种领导风格</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">项目经理的几种权力</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">项目章程,假设日志,商业文件，协议</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">专家判读,头脑风暴,焦点小组,访谈,会议管理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">核对单,会议</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">项目整合管理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">指导与管理项目工作</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">项目管理信息系统,工作绩效数据,问题日志,变更请求</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">监控项目工作</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">工作绩效信息,备选方案分析,成本效益分析,根本原因分析,趋势分析,偏差分析</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">管理项目知识</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">显性知识,隐形知识,知识管理,信息管理,经验教训登记册</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">实施整体变更控制</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">变更流程,变更控制工具</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">结束项目或阶段</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">正常收尾流程,项目提前终止收尾流程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">项目范围管理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">项目范围,产品范围</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">定义范围</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">需求文件,产品分析,项目范围说明书</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">规划范围管理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">项目章程,备选方案分析,范围管理计划,需求管理计划</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">收集需求</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">需求文件,需求跟踪矩阵</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">数据收集工具,数据分析工具,决策工具,数据表现工具,人际关系与团队技能</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">系统交互图,原型法</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">确认范围</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">确认范围,控制质量,验收的可交付成果</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">创建WBS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">WBS词典,工作包,范围基准</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">控制范围</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">控制范围,范围蔓延</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">项目进度管理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">规划进度管理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">按需进度计划,具有未完成项的迭代型进度计划</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">定义活动,活动清单,里程碑清单</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">排列活动顺序</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">紧前关系绘图法,确定整合依赖关系,提前量和滞后量,项目进度网络图</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">估算活动持续时间</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">参数估算,类比估算,三点估算,自下而上估算</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">制定进度计划</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">进度计划,进度基准,进度压缩,资源平衡,资源平滑</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">横道图,项目日历,里程碑图,项目进度网络图</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">控制进度</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">迭代燃尽图,工作绩效信息,进度预测</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">项目成本管理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">估算成本</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">制定预算</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">成本基准,成本汇总,储备分析,资金限制平衡</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">规划成本管理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">控制成本</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">挣值分析,偏差分析,趋势分析,完工尚需绩效指数</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">项目质量管理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">戴明,朱兰,克鲁斯比,石川</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="Docker "
+           href="/2019/07/19/docker_01/"
+           data-tag="Docker"
+           data-author="" >
+            <span class="post-title" title="docker的那些事">docker的那些事</span>
+            <span class="post-date" title="2019-07-19 03:03:19">2019/07/19</span>
+        </a>
+        
+        <a  class="Docker "
+           href="/2019/07/19/docker_02/"
+           data-tag="Docker,容器,虚拟机"
+           data-author="" >
+            <span class="post-title" title="什么是容器">什么是容器</span>
+            <span class="post-date" title="2019-07-19 05:15:52">2019/07/19</span>
+        </a>
+        
+        <a  class="Jmeter "
+           href="/2019/07/19/Beanshell_01/"
+           data-tag="Jmeter,Beanshell"
+           data-author="" >
+            <span class="post-title" title="Beanshell中字符串拆分及字符串转换为整型">Beanshell中字符串拆分及字符串转换为整型</span>
+            <span class="post-date" title="2019-07-19 05:01:39">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第一章 引论 "
+           href="/2019/07/19/pmp_1.1/"
+           data-tag="PMP,良好实践,普遍认可"
+           data-author="" >
+            <span class="post-title" title="1.1 指南概述和目的">1.1 指南概述和目的</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第一章 引论 "
+           href="/2019/07/19/pmp_1.2.1/"
+           data-tag="PMP,项目,项目管理"
+           data-author="" >
+            <span class="post-title" title="1.2.1 项目及项目管理">1.2.1 项目及项目管理</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第一章 引论 "
+           href="/2019/07/19/pmp_1.2.2/"
+           data-tag="PMP,项目,项目组合,项目集,运营"
+           data-author="" >
+            <span class="post-title" title="1.2.2 项目组合、项目集、项目、运营">1.2.2 项目组合、项目集、项目、运营</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第一章 引论 "
+           href="/2019/07/19/pmp_1.2.3/"
+           data-tag="PMP,项目生命周期,预测型,适应型"
+           data-author="" >
+            <span class="post-title" title="1.2.3 生命周期和阶段">1.2.3 生命周期和阶段</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第一章 引论 "
+           href="/2019/07/19/pmp_1.2.5/"
+           data-tag="PMP,商业论证,效益管理计划"
+           data-author="" >
+            <span class="post-title" title="1.2.5 商业论证和效益管理计划">1.2.5 商业论证和效益管理计划</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第一章 引论 "
+           href="/2019/07/19/pmp_1.2.4/"
+           data-tag="PMP,工作绩效数据,工作绩效信息,工作绩效报告"
+           data-author="" >
+            <span class="post-title" title="1.2.4 工作绩效数据、信息和报告">1.2.4 工作绩效数据、信息和报告</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第二章 项目运行环境 "
+           href="/2019/07/19/pmp_2.1/"
+           data-tag="PMP,事业环境因素"
+           data-author="" >
+            <span class="post-title" title="2.1 事业环境因素">2.1 事业环境因素</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第二章 项目运行环境 "
+           href="/2019/07/19/pmp_2.2/"
+           data-tag="PMP,组织过程资产"
+           data-author="" >
+            <span class="post-title" title="2.2 组织过程资产">2.2 组织过程资产</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第一章 引论 "
+           href="/2019/07/19/pmp_1.2.6_7/"
+           data-tag="PMP,项目章程,项目管理计划,项目成功的标准"
+           data-author="" >
+            <span class="post-title" title="1.2.6&amp;1.2.7 项目章程和项目管理计划、项目成功的标准">1.2.6&amp;1.2.7 项目章程和项目管理计划、项目成功的标准</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第二章 项目运行环境 "
+           href="/2019/07/19/pmp_2.3/"
+           data-tag="PMP,组织系统,职能型,矩阵型,项目型"
+           data-author="" >
+            <span class="post-title" title="2.3 组织系统">2.3 组织系统</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第二章 项目运行环境 "
+           href="/2019/07/19/pmp_2.4/"
+           data-tag="PMP,项目管理办公室,支持型,控制型,指令型,PMO作用"
+           data-author="" >
+            <span class="post-title" title="2.4 项目管理办公室">2.4 项目管理办公室</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第三章 项目经理的角色 "
+           href="/2019/07/19/pmp_3.0/"
+           data-tag="PMP,项目经理的角色,PMI人才三角"
+           data-author="" >
+            <span class="post-title" title="3.0 项目经理的角色">3.0 项目经理的角色</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第三章 项目经理的角色 "
+           href="/2019/07/30/pmp_3.2/"
+           data-tag="PMP,项目经理的角色,项目经理的几种领导风格"
+           data-author="" >
+            <span class="post-title" title="3.2 项目经理的几种领导风格">3.2 项目经理的几种领导风格</span>
+            <span class="post-date" title="2019-07-30 08:00:00">2019/07/30</span>
+        </a>
+        
+        <a  class="PMP重点知识 第三章 项目经理的角色 "
+           href="/2019/07/19/pmp_3.1/"
+           data-tag="PMP,项目经理的几种权力"
+           data-author="" >
+            <span class="post-title" title="3.1 项目经理的几种权力">3.1 项目经理的几种权力</span>
+            <span class="post-date" title="2019-07-19 10:58:11">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第四章 项目整合管理 "
+           href="/2019/07/30/pmp_4.1/"
+           data-tag="PMP,项目章程,假设日志,商业文件，协议,专家判读,头脑风暴,焦点小组,访谈,会议管理"
+           data-author="" >
+            <span class="post-title" title="4.1 制定项目章程">4.1 制定项目章程</span>
+            <span class="post-date" title="2019-07-30 13:00:00">2019/07/30</span>
+        </a>
+        
+        <a  class="PMP重点知识 第四章 项目整合管理 "
+           href="/2019/07/30/pmp_4.2/"
+           data-tag="PMP,项目管理计划,核对单,会议"
+           data-author="" >
+            <span class="post-title" title="4.2 制定项目管理计划">4.2 制定项目管理计划</span>
+            <span class="post-date" title="2019-07-30 13:00:00">2019/07/30</span>
+        </a>
+        
+        <a  class="PMP重点知识 第四章 项目整合管理 "
+           href="/2019/07/30/pmp_4.0/"
+           data-tag="PMP,项目整合管理"
+           data-author="" >
+            <span class="post-title" title="4.0 项目整合管理">4.0 项目整合管理</span>
+            <span class="post-date" title="2019-07-30 09:00:00">2019/07/30</span>
+        </a>
+        
+        <a  class="PMP重点知识 第四章 项目整合管理 "
+           href="/2019/07/30/pmp_4.3/"
+           data-tag="PMP,指导与管理项目工作,项目管理信息系统,工作绩效数据,问题日志,变更请求"
+           data-author="" >
+            <span class="post-title" title="4.3 指导与管理项目工作">4.3 指导与管理项目工作</span>
+            <span class="post-date" title="2019-07-30 14:00:00">2019/07/30</span>
+        </a>
+        
+        <a  class="PMP重点知识 第四章 项目整合管理 "
+           href="/2019/07/19/pmp_4.5/"
+           data-tag="PMP,监控项目工作,工作绩效信息,备选方案分析,成本效益分析,根本原因分析,趋势分析,偏差分析"
+           data-author="" >
+            <span class="post-title" title="4.5 监控项目工作">4.5 监控项目工作</span>
+            <span class="post-date" title="2019-07-19 10:58:12">2019/07/19</span>
+        </a>
+        
+        <a  class="PMP重点知识 第四章 项目整合管理 "
+           href="/2019/07/30/pmp_4.4/"
+           data-tag="PMP,管理项目知识,显性知识,隐形知识,知识管理,信息管理,经验教训登记册"
+           data-author="" >
+            <span class="post-title" title="4.4 管理项目知识">4.4 管理项目知识</span>
+            <span class="post-date" title="2019-07-30 16:00:00">2019/07/30</span>
+        </a>
+        
+        <a  class="PMP重点知识 第四章 项目整合管理 "
+           href="/2019/07/31/pmp_4.6/"
+           data-tag="PMP,实施整体变更控制,变更流程,变更控制工具"
+           data-author="" >
+            <span class="post-title" title="4.6 实施整体变更控制">4.6 实施整体变更控制</span>
+            <span class="post-date" title="2019-07-31 09:00:00">2019/07/31</span>
+        </a>
+        
+        <a  class="PMP重点知识 第四章 项目整合管理 "
+           href="/2019/07/31/pmp_4.7/"
+           data-tag="PMP,结束项目或阶段,正常收尾流程,项目提前终止收尾流程"
+           data-author="" >
+            <span class="post-title" title="4.7 项目结束或阶段">4.7 项目结束或阶段</span>
+            <span class="post-date" title="2019-07-31 13:00:00">2019/07/31</span>
+        </a>
+        
+        <a  class="PMP重点知识 第五章 项目范围管理 "
+           href="/2019/07/31/pmp_5.0/"
+           data-tag="PMP,项目范围管理,项目范围,产品范围"
+           data-author="" >
+            <span class="post-title" title="5.0 项目范围管理">5.0 项目范围管理</span>
+            <span class="post-date" title="2019-07-31 13:00:00">2019/07/31</span>
+        </a>
+        
+        <a  class="PMP重点知识 第五章 项目范围管理 "
+           href="/2019/08/01/pmp_5.3/"
+           data-tag="PMP,定义范围,需求文件,产品分析,项目范围说明书"
+           data-author="" >
+            <span class="post-title" title="5.3 定义范围">5.3 定义范围</span>
+            <span class="post-date" title="2019-08-01 10:00:00">2019/08/01</span>
+        </a>
+        
+        <a  class="PMP重点知识 第五章 项目范围管理 "
+           href="/2019/07/31/pmp_5.1/"
+           data-tag="PMP,规划范围管理,项目章程,备选方案分析,范围管理计划,需求管理计划"
+           data-author="" >
+            <span class="post-title" title="5.1 规划范围管理">5.1 规划范围管理</span>
+            <span class="post-date" title="2019-07-31 18:00:00">2019/07/31</span>
+        </a>
+        
+        <a  class="PMP重点知识 第五章 项目范围管理 "
+           href="/2019/08/01/pmp_5.2/"
+           data-tag="PMP,收集需求,需求文件,需求跟踪矩阵,数据收集工具,数据分析工具,决策工具,数据表现工具,人际关系与团队技能,系统交互图,原型法"
+           data-author="" >
+            <span class="post-title" title="5.2 收集需求">5.2 收集需求</span>
+            <span class="post-date" title="2019-08-01 08:00:00">2019/08/01</span>
+        </a>
+        
+        <a  class="PMP重点知识 第五章 项目范围管理 "
+           href="/2019/08/01/pmp_5.5/"
+           data-tag="PMP,确认范围,确认范围,控制质量,验收的可交付成果"
+           data-author="" >
+            <span class="post-title" title="5.5 确认范围">5.5 确认范围</span>
+            <span class="post-date" title="2019-08-01 19:20:00">2019/08/01</span>
+        </a>
+        
+        <a  class="PMP重点知识 第五章 项目范围管理 "
+           href="/2019/08/01/pmp_5.4/"
+           data-tag="PMP,创建WBS,WBS词典,工作包,范围基准"
+           data-author="" >
+            <span class="post-title" title="5.4 创建WBS">5.4 创建WBS</span>
+            <span class="post-date" title="2019-08-01 19:00:00">2019/08/01</span>
+        </a>
+        
+        <a  class="PMP重点知识 第五章 项目范围管理 "
+           href="/2019/08/01/pmp_5.6/"
+           data-tag="PMP,控制范围,控制范围,范围蔓延"
+           data-author="" >
+            <span class="post-title" title="5.6 控制范围">5.6 控制范围</span>
+            <span class="post-date" title="2019-08-01 20:00:00">2019/08/01</span>
+        </a>
+        
+        <a  class="PMP重点知识 第六章 项目进度管理 "
+           href="/2019/08/02/pmp_6.1/"
+           data-tag="PMP,项目进度管理,规划进度管理"
+           data-author="" >
+            <span class="post-title" title="6.1 规划进度管理">6.1 规划进度管理</span>
+            <span class="post-date" title="2019-08-02 14:00:00">2019/08/02</span>
+        </a>
+        
+        <a  class="PMP重点知识 第六章 项目进度管理 "
+           href="/2019/08/02/pmp_6.0/"
+           data-tag="PMP,项目进度管理,按需进度计划,具有未完成项的迭代型进度计划"
+           data-author="" >
+            <span class="post-title" title="6.0 项目进度管理">6.0 项目进度管理</span>
+            <span class="post-date" title="2019-08-02 10:00:00">2019/08/02</span>
+        </a>
+        
+        <a  class="PMP重点知识 第六章 项目进度管理 "
+           href="/2019/08/02/pmp_6.2/"
+           data-tag="PMP,项目进度管理,定义活动,活动清单,里程碑清单"
+           data-author="" >
+            <span class="post-title" title="6.2 定义活动">6.2 定义活动</span>
+            <span class="post-date" title="2019-08-02 15:00:00">2019/08/02</span>
+        </a>
+        
+        <a  class="PMP重点知识 第六章 项目进度管理 "
+           href="/2019/08/02/pmp_6.3/"
+           data-tag="PMP,排列活动顺序,紧前关系绘图法,确定整合依赖关系,提前量和滞后量,项目进度网络图"
+           data-author="" >
+            <span class="post-title" title="6.3 排列活动顺序">6.3 排列活动顺序</span>
+            <span class="post-date" title="2019-08-02 17:00:00">2019/08/02</span>
+        </a>
+        
+        <a  class="PMP重点知识 第六章 项目进度管理 "
+           href="/2019/08/03/pmp_6.4/"
+           data-tag="PMP,估算活动持续时间,参数估算,类比估算,三点估算,自下而上估算"
+           data-author="" >
+            <span class="post-title" title="6.4 估算活动持续时间">6.4 估算活动持续时间</span>
+            <span class="post-date" title="2019-08-03 10:00:00">2019/08/03</span>
+        </a>
+        
+        <a  class="PMP重点知识 第六章 项目进度管理 "
+           href="/2019/08/03/pmp_6.5/"
+           data-tag="PMP,制定进度计划,进度计划,进度基准,进度压缩,资源平衡,资源平滑,横道图,项目日历,里程碑图,项目进度网络图"
+           data-author="" >
+            <span class="post-title" title="6.5 估算活动持续时间">6.5 估算活动持续时间</span>
+            <span class="post-date" title="2019-08-03 11:00:00">2019/08/03</span>
+        </a>
+        
+        <a  class="PMP重点知识 第六章 项目进度管理 "
+           href="/2019/08/03/pmp_6.6/"
+           data-tag="PMP,控制进度,迭代燃尽图,工作绩效信息,进度预测"
+           data-author="" >
+            <span class="post-title" title="6.6 控制进度">6.6 控制进度</span>
+            <span class="post-date" title="2019-08-03 13:00:00">2019/08/03</span>
+        </a>
+        
+        <a  class="PMP重点知识 第七章 项目成本管理 "
+           href="/2019/08/03/pmp_7.0/"
+           data-tag="PMP,项目成本管理"
+           data-author="" >
+            <span class="post-title" title="7.0 成本管理">7.0 成本管理</span>
+            <span class="post-date" title="2019-08-03 14:00:00">2019/08/03</span>
+        </a>
+        
+        <a  class="PMP重点知识 第七章 项目成本管理 "
+           href="/2019/08/03/pmp_7.2/"
+           data-tag="PMP,估算成本"
+           data-author="" >
+            <span class="post-title" title="7.2 估算成本">7.2 估算成本</span>
+            <span class="post-date" title="2019-08-03 15:30:00">2019/08/03</span>
+        </a>
+        
+        <a  class="PMP重点知识 第七章 项目成本管理 "
+           href="/2019/08/03/pmp_7.3/"
+           data-tag="PMP,制定预算,成本基准,成本汇总,储备分析,资金限制平衡"
+           data-author="" >
+            <span class="post-title" title="7.3 制定预算">7.3 制定预算</span>
+            <span class="post-date" title="2019-08-03 15:30:00">2019/08/03</span>
+        </a>
+        
+        <a  class="PMP重点知识 第七章 项目成本管理 "
+           href="/2019/08/03/pmp_7.1/"
+           data-tag="PMP,规划成本管理"
+           data-author="" >
+            <span class="post-title" title="7.1 规划成本管理">7.1 规划成本管理</span>
+            <span class="post-date" title="2019-08-03 15:00:00">2019/08/03</span>
+        </a>
+        
+        <a  class="PMP重点知识 第七章 项目成本管理 "
+           href="/2019/08/03/pmp_7.4/"
+           data-tag="PMP,控制成本,挣值分析,偏差分析,趋势分析,完工尚需绩效指数"
+           data-author="" >
+            <span class="post-title" title="7.4 控制成本">7.4 控制成本</span>
+            <span class="post-date" title="2019-08-03 16:00:00">2019/08/03</span>
+        </a>
+        
+        <a  class="PMP重点知识 第八章 项目质量管理 "
+           href="/2019/08/03/pmp_8.0/"
+           data-tag="PMP,项目质量管理,戴明,朱兰,克鲁斯比,石川"
+           data-author="" >
+            <span class="post-title" title="8.0 项目质量管理">8.0 项目质量管理</span>
+            <span class="post-date" title="2019-08-03 15:00:00">2019/08/03</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-pmp_7.0" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">7.0 成本管理</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="PMP重点知识">PMP重点知识</a>/
+            
+                <a href="javascript:" data-rel="第七章 项目成本管理">第七章 项目成本管理</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color4">PMP</a>
+            
+            <a href="javascript:" class="color2">项目成本管理</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-08-03 15:53:20'>2019-08-03 14:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:171</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>项目成本管理包括为使项目在批准的预算内完成而对成本进行<strong>规划、估算、预算、融资、筹资、管理和控制</strong>的各个子过程。</li>
+<li>项目成本管理<strong>重点关注完成项目活动所需资源的成本</strong>，但同时也应考虑<strong>项目决策对项目产品、服务或成果的使用成本、维护成本和支持成本</strong>的影响。</li>
+<li>在<strong>适应型环境中</strong>采用轻量级估算方法快速生成对项目人力成本的高层级预测，在出现变更时容易调整；而<strong>详细的估算适用于采用准时制的短期规划</strong>。</li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 592497880@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>7.0 成本管理</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">171</span></p>
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="ewang">ewang</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-08-03, 14:00:00</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-03, 15:53:20</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/08/03/pmp_7.0/" title="7.0 成本管理">http://henni-719.github.io/2019/08/03/pmp_7.0/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: '',
+            clientSecret: '',
+            repo: 'henni-719.github.io',
+            owner: 'henni-719',
+            admin: ['henni-719'],
+            id: location.pathname,
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 Yelog</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#Docker','#容器','#虚拟机','#Jmeter','#Beanshell','#PMP','#良好实践','#普遍认可','#项目','#项目管理','#项目组合','#项目集','#运营','#项目生命周期','#预测型','#适应型','#商业论证','#效益管理计划','#工作绩效数据','#工作绩效信息','#工作绩效报告','#事业环境因素','#组织过程资产','#项目章程','#项目管理计划','#项目成功的标准','#组织系统','#职能型','#矩阵型','#项目型','#项目管理办公室','#支持型','#控制型','#指令型','#PMO作用','#项目经理的角色','#PMI人才三角','#项目经理的几种领导风格','#项目经理的几种权力','#项目章程,假设日志,商业文件，协议','#专家判读,头脑风暴,焦点小组,访谈,会议管理','#核对单,会议','#项目整合管理','#指导与管理项目工作','#项目管理信息系统,工作绩效数据,问题日志,变更请求','#监控项目工作','#工作绩效信息,备选方案分析,成本效益分析,根本原因分析,趋势分析,偏差分析','#管理项目知识','#显性知识,隐形知识,知识管理,信息管理,经验教训登记册','#实施整体变更控制','#变更流程,变更控制工具','#结束项目或阶段','#正常收尾流程,项目提前终止收尾流程','#项目范围管理','#项目范围,产品范围','#定义范围','#需求文件,产品分析,项目范围说明书','#规划范围管理','#项目章程,备选方案分析,范围管理计划,需求管理计划','#收集需求','#需求文件,需求跟踪矩阵','#数据收集工具,数据分析工具,决策工具,数据表现工具,人际关系与团队技能','#系统交互图,原型法','#确认范围','#确认范围,控制质量,验收的可交付成果','#创建WBS','#WBS词典,工作包,范围基准','#控制范围','#控制范围,范围蔓延','#项目进度管理','#规划进度管理','#按需进度计划,具有未完成项的迭代型进度计划','#定义活动,活动清单,里程碑清单','#排列活动顺序','#紧前关系绘图法,确定整合依赖关系,提前量和滞后量,项目进度网络图','#估算活动持续时间','#参数估算,类比估算,三点估算,自下而上估算','#制定进度计划','#进度计划,进度基准,进度压缩,资源平衡,资源平滑','#横道图,项目日历,里程碑图,项目进度网络图','#控制进度','#迭代燃尽图,工作绩效信息,进度预测','#项目成本管理','#估算成本','#制定预算','#成本基准,成本汇总,储备分析,资金限制平衡','#规划成本管理','#控制成本','#挣值分析,偏差分析,趋势分析,完工尚需绩效指数','#项目质量管理','#戴明,朱兰,克鲁斯比,石川',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
